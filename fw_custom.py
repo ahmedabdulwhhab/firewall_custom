@@ -195,7 +195,7 @@ COOKIE_SHIFT_VLANID = 32
 
 
 
-FW_Switches_Range = 0x20          #Ahmed notes:  define any switch has id lower than 31 don't consider it as firewall
+FW_Switches_Range = 20          #Ahmed notes:  define any switch has id lower than 20 don't consider it as firewall
 class RestFirewallAPI(app_manager.RyuApp):
 
     OFP_VERSIONS = [ofproto_v1_0.OFP_VERSION,
@@ -387,6 +387,7 @@ class FirewallController(ControllerBase):
     @staticmethod
     def regist_ofs(dp):
         dpid_str = dpid_lib.dpid_to_str(dp.id)
+        print("my dp.id is ",dp.id)
         if(dp.id <FW_Switches_Range):           #Ahmed notes
             return
         try:
@@ -1122,3 +1123,4 @@ class Action(object):
 #disable packet_in Line 559
 #def _to_of_flow(self, cookie, priority, match, actions):        Line 873
 #FirewallController._LOGGER.info('dpid=%s: Join as firewall.',  Line 404
+
