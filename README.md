@@ -40,7 +40,7 @@ curl -X POST -d '{"nw_src": "10.0.0.4", "nw_dst": "10.0.0.1","dl_type":"IPv4", "
 
 #TO ALLOW SOCKET CONNECTION
 </n>
-curl -X POST -d '{"nw_src": "10.0.0.1/32", "nw_dst": "10.0.0.2/32","dl_type":"IPv4", "nw_proto": "TCP"}' http://localhost:8080/firewall/rules/0000000000000001 #to allow ICMP
+curl -X POST -d '{"nw_src": "10.0.0.1/32", "nw_dst": "10.0.0.2/32","dl_type":"IPv4", "nw_proto": "TCP"}' http://localhost:8080/firewall/rules/0000000000000040 #to allow ICMP
 </n>
 
-curl -X POST -d '{"nw_src": "10.0.0.2/32", "nw_dst": "10.0.0.1/32","dl_type":"IPv4", "nw_proto": "TCP"}' http://localhost:8080/firewall/rules/0000000000000001 #to allow ICMP
+curl -X POST -d '{"nw_src": "10.0.0.2/32", "nw_dst": "10.0.0.1/32","dl_type":"IPv4", "nw_proto": "TCP"}' http://localhost:8080/firewall/rules/0000000000000040 #to allow ICMP
