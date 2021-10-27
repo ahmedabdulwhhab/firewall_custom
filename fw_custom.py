@@ -195,7 +195,7 @@ COOKIE_SHIFT_VLANID = 32
 
 
 
-FW_Switches_Range = 20          #Ahmed notes:  define any switch has id lower than 20 don't consider it as firewall
+FW_Switches_Range = 0x20          #Ahmed notes:  define any switch has id lower than 31 don't consider it as firewall
 class RestFirewallAPI(app_manager.RyuApp):
 
     OFP_VERSIONS = [ofproto_v1_0.OFP_VERSION,
