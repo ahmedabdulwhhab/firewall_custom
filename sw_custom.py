@@ -22,7 +22,7 @@ from ryu.lib.packet import packet
 from ryu.lib.packet import ethernet
 from ryu.lib.packet import ether_types
 
-FW_Switches_Range = 0x20          #Ahmed notes:  define any switch has id lower than 31 consider it as simple_switch
+FW_Switches_Range = 0x20          #Ahmed notes:  define any switch has id lower than 20 consider it as simple_switch
 class SimpleSwitch13(app_manager.RyuApp):
     OFP_VERSIONS = [ofproto_v1_3.OFP_VERSION]
 
@@ -124,3 +124,4 @@ class SimpleSwitch13(app_manager.RyuApp):
         out = parser.OFPPacketOut(datapath=datapath, buffer_id=msg.buffer_id,
                                   in_port=in_port, actions=actions, data=data)
         datapath.send_msg(out)
+
