@@ -30,6 +30,7 @@ class RoutingTopo(Topo):
         self.addLink("h6", "s2", bw=15.0, delay='7ms', use_htb=True)
         self.addLink("s1", "s21", bw=5.0, delay='7ms', use_htb=True)
         self.addLink("s2", "s21", bw=5.0, delay='7ms', use_htb=True)
+        self.addLink("h4", "s21", bw=5.0, delay='7ms', use_htb=True)
         
 
 
